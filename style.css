@@ -96,7 +96,7 @@ nav {
     margin-bottom: 2rem;
 }
 
-/* About Section */
+/* About Section - UPDATED PROFILE PICTURE STYLING */
 .about {
     padding: 5rem 2rem;
     text-align: center;
@@ -108,12 +108,25 @@ nav {
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 3rem;
+    gap: 3rem;
 }
 
 .about-content img {
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    margin-right: 3rem;
-    max-width: 300px;
+    object-fit: cover;
+    border: 5px solid #007BFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    filter: grayscale(20%);
+}
+
+.about-content img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    filter: grayscale(0%);
+    border-color: #0056b3;
 }
 
 .about-text {
@@ -230,10 +243,25 @@ footer {
 
     .about-content {
         flex-direction: column;
+        text-align: center;
     }
 
     .about-content img {
         margin-right: 0;
         margin-bottom: 2rem;
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}
+
+/* Very small devices */
+@media (max-width: 480px) {
+    .about-content img {
+        width: 180px;
+        height: 180px;
     }
 }
